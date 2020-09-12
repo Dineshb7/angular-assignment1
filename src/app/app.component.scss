@@ -3,11 +3,13 @@ body {
 }
 .card-deck {
   margin: 0 0px;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 .card-deck .card {
   margin: 0 0 1rem;
 }
+
+
 
 @media (min-width: 700px) and (max-width: 1023px) {
   .card-deck .card {
@@ -16,6 +18,12 @@ body {
   }
     .custbtnrow{
     margin-left: -23px !important;
+  }
+  .custbutton{
+    font-size: 14px;
+  }
+  .custCard{
+    margin-right: 6px !important;
   }
 }
 @media (min-width: 576px) and (max-width: 699px) {
@@ -27,7 +35,7 @@ body {
     margin-left: -26px !important;
   }
   .custbutton{
-      font-size: 12px;
+      font-size: 11px !important;
   }
 }
 
@@ -42,6 +50,9 @@ body {
     margin-left: -15px !important;
     margin-right: -15px !important;
   }
+  .custCard{
+    margin-right: 6px !important;
+  }
 }
 
 @media (min-width: 1440px) 
@@ -49,6 +60,9 @@ body {
   .card-deck .card {
     -ms-flex: 0 0 24%;
     flex: 0 0 24%;
+  }
+  .custCard{
+    margin-right: 6px !important;
   }
 }
 
@@ -73,6 +87,7 @@ body {
 .image-class{
   margin: 20px;
   background-color: lightgrey;
+  height: 260px;
 }
 .custrow{
   margin: 0px;
@@ -90,7 +105,7 @@ body {
   margin-left: 38px;
 }
 .custbutton{
-    margin: 4px;
+  margin: 4px;
   border-radius: 0.25rem;
   background-color: lightgreen;
 }
