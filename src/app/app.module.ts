@@ -10,7 +10,7 @@ import {AppServiceService} from './app-service.service'
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule 
   ],
