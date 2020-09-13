@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
       }
   }
 
+  trackByFilterId(index,object){
+    return object.flight_number;
+  }
+
   launchSuccessBtn(launchSel) {
     if (launchSel == 'true') {
       this.appService.launchCall().subscribe((launchSuccessdata) => {
