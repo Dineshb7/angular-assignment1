@@ -36,17 +36,27 @@
 
       <div class="col-sm-10">
         <div class="card-deck">
-          <div class="card custCard" *ngFor="let card of objects;trackBy:trackByFilterId">
-            <img class="image-class" src={{card.links.mission_patch_small}} alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{card.mission_name}}#{{card.flight_number}}</h5>
-              <p><b>Mission Ids:</b> {{card.mission_id}}</p>
-              <p><b>Launch Year:</b> {{card.launch_year}}</p>
-              <p><b>Succesfull Launch:</b> {{card.launch_success}}</p>
-              <p><b>Succesfull Landing:</b> {{card.launch_year}}</p>
-            </div>
+          <div *ngIf="loading else loaded">
+            Loading...
           </div>
+          <ng-template #loaded>
+            <div  *ngIf="objects && objects.length==0">
+              No Data Present
+            </div>
 
+            <ng-container *ngIf="objects && objects.length>0">
+              <div class="card custCard" *ngFor="let card of objects;trackBy:trackByFilterId">
+                <img class="image-class" src={{card.links.mission_patch_small}} alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{card.mission_name}}#{{card.flight_number}}</h5>
+                  <p><b>Mission Ids:</b> {{card.mission_id}}</p>
+                  <p><b>Launch Year:</b> {{card.launch_year}}</p>
+                  <p><b>Succesfull Launch:</b> {{card.launch_success}}</p>
+                  <p><b>Succesfull Landing:</b> {{card.launch_year}}</p>
+                </div>
+              </div>
+            </ng-container>
+          </ng-template>
         </div>
       </div>
     </div>

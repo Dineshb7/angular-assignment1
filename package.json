@@ -18,8 +18,8 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
     "serve:ssr": "node dist/angular-assignment1/server/main.js",
     "webpack:prod": "webpack --config webpack.server.config.js --progress --colors",
-    "json": "ng build --prod --stats-json",
-    "bundle-report": "webpack-bundle-analyzer dist/stats.json"
+    "json": "ng build  --stats-json",
+    "bundle-report": "webpack-bundle-analyzer dist/angular-assignment1/browser/stats.json"
   },
   "private": true,
   "dependencies": {
