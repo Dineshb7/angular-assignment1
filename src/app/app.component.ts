@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   public objects: any = []
   public buttons = [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
 
-  constructor(private appService: AppServiceService) { }
+  constructor(private appService: AppServiceService, ) { }
   ngOnInit() {
     this.appService.defaultCall().subscribe((data) => {
         this.objects = data
@@ -56,3 +56,17 @@ export class AppComponent implements OnInit {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+    // "serve:ssr": "node dist/angular-assignment1/server/main.js",
+    // "build:ssr": "ng build --prod && ng run angular-assignment1:server:production",
+    // "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
