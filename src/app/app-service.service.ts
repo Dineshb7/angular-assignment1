@@ -20,7 +20,7 @@ export class AppServiceService {
   }
 
   landCall(){
-    return this.http.get('https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true',httpOptions)
+    return this.http.get('https://api.spaceXdata.com/v3/launches?limit=100&land_success=true',httpOptions)
   }
 
   yearLaunchCall(year){
