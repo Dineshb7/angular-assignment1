@@ -24,7 +24,7 @@ export class AppServiceService {
   }
 
   yearLaunchCall(year){
-    return this.http.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_success=true&land_success=true&launch_year=${year}`,httpOptions)
+    return this.http.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${year}`,httpOptions)
   }
 
 
